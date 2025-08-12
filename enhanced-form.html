@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An enhanced HTML5 form with semantic structure, accessibility, and validation features.">
+  <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header role="banner">
+    <h1>Enhanced HTML5 Form Demo</h1>
+    <p>Explore a fully-featured HTML5 form with semantic structure and accessibility in mind.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main Navigation">
+    <ul>
+      <li><a href="#form">Form</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main role="main">
+
+    <!-- Form Section -->
+    <section id="form" aria-labelledby="form-heading">
+      <h2 id="form-heading">User Registration Form</h2>
+      <form action="/submit" method="post" autocomplete="on">
+        
+        <!-- Personal Info -->
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+256700000000" pattern="^\+?[0-9\s\-]{7,15}$" required>
+
+        </fieldset>
+
+        <!-- Account Info -->
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required minlength="4" maxlength="20">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6">
+
+          <label for="confirm">Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" required>
+
+          <label for="role">Select Role:</label>
+          <select id="role" name="role" required>
+            <option value="">--Choose--</option>
+            <option value="user">User</option>
+            <option value="admin">Administrator</option>
+            <option value="guest">Guest</option>
+          </select>
+
+        </fieldset>
+
+        <!-- Preferences -->
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label for="newsletter">Subscribe to newsletter:</label>
+          <input type="checkbox" id="newsletter" name="newsletter" checked>
+
+          <p>Choose your interests:</p>
+          <label><input type="checkbox" name="interests" value="html"> HTML</label>
+          <label><input type="checkbox" name="interests" value="css"> CSS</label>
+          <label><input type="checkbox" name="interests" value="accessibility"> Accessibility</label>
+
+          <p>Preferred Contact Method:</p>
+          <label><input type="radio" name="contact" value="email" required> Email</label>
+          <label><input type="radio" name="contact" value="phone"> Phone</label>
+
+        </fieldset>
+
+        <!-- Read-only Info -->
+        <fieldset>
+          <legend>System Info</legend>
+          <label for="userid">User ID (readonly):</label>
+          <input type="text" id="userid" name="userid" value="USR12345" readonly>
+        </fieldset>
+
+        <!-- Submit -->
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+
+      </form>
+    </section>
+
+    <!-- Informational Section -->
+    <section id="info" aria-labelledby="info-heading">
+      <h2 id="info-heading">Why Use Semantic HTML?</h2>
+      <ul>
+        <li>Improves accessibility for screen readers</li>
+        <li>Enhances SEO and discoverability</li>
+        <li>Makes code easier to read and maintain</li>
+      </ul>
+
+      <h3>Comparison Table</h3>
+      <table>
+        <caption>Semantic vs Non-Semantic Elements</caption>
+        <thead>
+          <tr>
+            <th>Semantic Element</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;article&gt;</td>
+            <td>Encapsulates independent content</td>
+          </tr>
+          <tr>
+            <td>&lt;section&gt;</td>
+            <td>Groups related content</td>
+          </tr>
+          <tr>
+            <td>&lt;div&gt;</td>
+            <td>Generic container (non-semantic)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Multimedia Example</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400x200" alt="Placeholder image of a web layout" width="400" height="200">
+        <figcaption>Example of a semantic layout using HTML5.</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Enhanced Forms Inc.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
+
